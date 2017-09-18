@@ -7,7 +7,8 @@ body {
 
 body {
   background: blue;
-  overflow: hidden; }
+  overflow-x: hidden;
+  overflow-y: hidden; }
 
 .home {
   position: fixed;
@@ -68,7 +69,7 @@ body {
       margin: auto;
       position: absolute;
       top: 0;
-      right: 700px;
+      right: 725px;
       left: 0;
       bottom: 0;
       width: 350px;
@@ -94,7 +95,7 @@ body {
       position: absolute;
       top: 0;
       right: 0;
-      left: 700px;
+      left: 725px;
       bottom: 0;
       width: 350px;
       height: 100%;

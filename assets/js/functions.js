@@ -32,19 +32,19 @@ var cvScroll=0;
 
 var opacityTrue=false;
 function mouseOverLeft()
-{if(buttonPosition!=0)
+{if(buttonPosition!=0||menuMovingTrue)
     {
         return;
     }
  
  if(portfolioMenuTrue)
      {
-         colorButtonLeftText=colorHome;
+         colorButtonLeftText=colorPort;
          
      }
  else if(homeMenuTrue)
      {
-         colorButtonLeftText=colorCV;
+         colorButtonLeftText=colorHome;
      }
  
     if(!cvMenuTrue)
@@ -63,18 +63,18 @@ function mouseOutLeft()
 
 function mouseOverRight()
 {
-    if(buttonPosition!=0)
+    if(buttonPosition!=0||menuMovingTrue)
     {
         return;
     }
     if(cvMenuTrue)
      {
-         colorButtonRightText=colorHome;
+         colorButtonRightText=colorCV;
          
      }
  else if(homeMenuTrue)
      {
-         colorButtonRightText=colorPort;
+         colorButtonRightText=colorHome;
      }
     if(!portfolioMenuTrue)
         {
@@ -120,7 +120,7 @@ function MoveLeft()
 }
 function MoveRight()
 {
-console.log("jas");
+
     if(menuMovingTrue)
         {
             return;
@@ -216,7 +216,8 @@ function MenuTrans()
                                      leftButtonTextElem.innerHTML="cv";
                                      leftButtonElem.style.left="0px";
                                      rightButtonElem.style.right="0px";
-                                     portfolioScroll=$(this).scrollTop();
+                                     bodyElem.style.overflowY="hidden";
+                                     
                                  }
                              portfolioElem.style.right=portfolioPosition+"%";
                          }
@@ -233,7 +234,7 @@ function MenuTrans()
                                      leftButtonTextElem.innerHTML="cv";
                                      leftButtonElem.style.left="0px";
                                      rightButtonElem.style.right="0px";
-                                     
+                                     bodyElem.style.overflowY="hidden";
                                      
                                  }
                              cvElem.style.right=cvPosition+"%";
@@ -252,7 +253,7 @@ function MenuTrans()
                                      menuMovingTrue=false;
                                      rightButtonTextElem.innerHTML="home";
                                      leftButtonElem.style.left="-75px";
-                                     
+                                     bodyElem.style.overflowY="none";
                                  }
                              cvElem.style.right=cvPosition+"%";
                          }
@@ -271,7 +272,7 @@ function MenuTrans()
                                      menuMovingTrue=false;
                                      leftButtonTextElem.innerHTML="home";
                                      rightButtonElem.style.right="-75px";
-                                 
+                                     bodyElem.style.overflowY="none";
                                  }
                               portfolioElem.style.right=portfolioPosition+"%";
                          }
@@ -453,8 +454,8 @@ function CopyTextFade()
 }
 function DefaultSettings()
 {
-    colorButtonLeftText=colorCV;
-    colorButtonRightText=colorPort;
+    colorButtonLeftText=colorHome;
+    colorButtonRightText=colorHome;
     leftButtonTextElem.style.color=colorButtonLeftText+opacityLeftButton+")"; 
     rightButtonTextElem.style.color=colorButtonRightText+opacityRightButton+")"; 
 }
@@ -513,3 +514,5 @@ function DeleteText(elem)
             elemCopyTrue=false;
 }}
 var elemCopyTrue=false;
+
+var bodyElem=document.getElementById("body");
