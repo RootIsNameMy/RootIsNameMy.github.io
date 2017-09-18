@@ -134,6 +134,13 @@ body {
         .home .contact-background .profile-body-contact .mobile spam {
           font-size: 30px;
           color: #90ff90; }
+      .home .contact-background .profile-body-contact p {
+        display: inline-block;
+        width: 100%;
+        font-size: 20px;
+        color: #c4c4c4;
+        text-align: center;
+        margin-top: 15px; }
   .home .contact-background-back {
     height: 500px;
     width: 100%;

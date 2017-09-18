@@ -166,6 +166,7 @@ function frame()
         
      MenuTrans();
     
+    CopyTextFade();
     
 }
 
@@ -193,6 +194,13 @@ function MenuTrans()
                     }
              
                  
+             
+             
+             
+             
+             
+             
+             
              if(homeMenuTrue)
                  {
                      if(portfolioPosition>-100)
@@ -268,10 +276,7 @@ function MenuTrans()
                               portfolioElem.style.right=portfolioPosition+"%";
                          }
                  }
-             if(!menuMovingTrue)
-                 {
-                     
-                 }
+            
          }
     else
         {
@@ -432,6 +437,14 @@ function BeginingTrans()
                 }
         }
 }
+function CopyTextFade()
+{
+    if(elem!=null)
+        {
+            elemCopyBuffer-=timeDelta;
+            elem.style.color=elemCopyColor+elemCopyBuffer+")";
+        }
+}
 function DefaultSettings()
 {
     colorButtonLeftText=colorCV;
@@ -464,3 +477,31 @@ var profileTitleCurrent;
 var colorPort="rgba(128,128,255,";
 var colorHome="rgba(128,255,128,";
 var colorCV="rgba(255,128,128,";
+var contactInfo=["+38670744762","koren.aka.root@gmail.com"];
+var elemCopyColor="rgba(196,196,196,";
+var elem;
+var elemCopyBuffer=1;
+function Clipboard(infoint)
+{
+    
+     var aux = document.createElement("input");
+  aux.setAttribute("value", contactInfo[infoint]);
+  document.body.appendChild(aux);
+  aux.select();
+  document.execCommand("copy");
+
+  document.body.removeChild(aux);
+
+      DeleteText(elem);
+        
+    elemCopyBuffer=1;
+ elem=document.createElement("p");
+    var parentElem=document.getElementById("profile-body-contact");
+    elem.innerHTML="Copied!";
+    parentElem.appendChild(elem);
+}
+function DeleteText(elem)
+{if(elem!=null)
+        {
+    elem.parentElement.removeChild(elem);
+}}
