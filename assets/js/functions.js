@@ -425,7 +425,8 @@ function BeginingTrans()
                             }
                         profileImgElem.style.boxShadow=shadowHoriz +"px "+shadowVertic +"px "+shadowDistance+"px black";
                         
-                        bodyElem.style.boxShadow=shadowHoriz +"px "+shadowVertic +"px "+shadowDistance+"px black";
+                        bodyHomeElem.style.boxShadow=shadowHoriz +"px "+shadowVertic +"px "+shadowDistance+"px black";
+                        console.log(bodyElem.style.boxShadow);
                         
                         titleElem.style.boxShadow=shadowHoriz +"px "+shadowVertic +"px "+shadowDistance+"px black";
                     }
@@ -454,6 +455,7 @@ function CopyTextFade()
 }
 function DefaultSettings()
 {
+    
     colorButtonLeftText=colorHome;
     colorButtonRightText=colorHome;
     leftButtonTextElem.style.color=colorButtonLeftText+opacityLeftButton+")"; 
@@ -463,7 +465,7 @@ var profileImgElem=document.getElementById("profile-img");
 var profileBodyElem=document.getElementById("profile-body-back");
 var profileTitleElem=document.getElementById("profile-title-back");
 
-var bodyElem=document.getElementById("profile-body");
+var bodyHomeElem=document.getElementById("profile-body");
 var titleElem=document.getElementById("profile-title");
 
 var bodyTrue=false;
