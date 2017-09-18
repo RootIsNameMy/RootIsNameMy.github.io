@@ -1,0 +1,215 @@
+h1, h2, p {
+  font-family: sans-serif; }
+
+body {
+  margin: 0;
+  font-family: sans-serif; }
+
+body {
+  background: blue;
+  overflow: hidden; }
+
+.home {
+  position: fixed;
+  background: #c8f0c8;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0%; }
+  .home #profile-title {
+    height: 100px;
+    width: 100%;
+    background: #444;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 75%;
+    box-shadow: 0px 0px 0px black; }
+    .home #profile-title h2 {
+      width: 100%;
+      padding: 5px;
+      margin-top: 2px;
+      margin-bottom: 0;
+      text-align: center;
+      font-size: 75px;
+      color: #e6e6e6; }
+      .home #profile-title h2 spam {
+        color: #e6e6e6;
+        cursor: pointer; }
+        .home #profile-title h2 spam:hover > spam {
+          text-decoration: underline; }
+        .home #profile-title h2 spam spam {
+          color: #80ff80; }
+  .home #profile-title-back {
+    height: 100px;
+    width: 100%;
+    background: #c8f0c8;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 75%;
+    box-shadow: 0px 0px 0px black; }
+  .home .contact-background {
+    height: 500px;
+    width: 100%;
+    background: #555;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    box-shadow: 0px 0px 0px black; }
+    .home .contact-background .profile-body-about {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 700px;
+      left: 0;
+      bottom: 0;
+      width: 350px;
+      height: 100%;
+      display: inline-block; }
+      .home .contact-background .profile-body-about h3 {
+        display: inline-block;
+        width: 100%;
+        font-size: 50px;
+        color: #90ff90;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 0; }
+      .home .contact-background .profile-body-about p {
+        display: inline-block;
+        width: 100%;
+        font-size: 30px;
+        color: #d2d2d2;
+        text-align: center;
+        margin-top: 20px; }
+    .home .contact-background .profile-body-contact {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 700px;
+      bottom: 0;
+      width: 350px;
+      height: 100%;
+      display: inline-block; }
+      .home .contact-background .profile-body-contact h3 {
+        display: inline-block;
+        width: 100%;
+        font-size: 50px;
+        color: #90ff90;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 0; }
+      .home .contact-background .profile-body-contact .mail {
+        display: inline-block;
+        width: 100%;
+        font-size: 25px;
+        color: #d2d2d2;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 0;
+        cursor: pointer; }
+        .home .contact-background .profile-body-contact .mail:hover > spam {
+          text-decoration: underline; }
+        .home .contact-background .profile-body-contact .mail spam {
+          font-size: 30px;
+          color: #90ff90; }
+      .home .contact-background .profile-body-contact .mobile {
+        display: inline-block;
+        width: 100%;
+        font-size: 25px;
+        color: #d2d2d2;
+        text-align: center;
+        margin-top: 5px;
+        cursor: pointer; }
+        .home .contact-background .profile-body-contact .mobile:hover > spam {
+          text-decoration: underline; }
+        .home .contact-background .profile-body-contact .mobile spam {
+          font-size: 30px;
+          color: #90ff90; }
+  .home .contact-background-back {
+    height: 500px;
+    width: 100%;
+    background: #c8f0c8;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; }
+  .home .profile-img {
+    background: url("../img/profile-picture.jpg") center center;
+    background-size: 300px;
+    box-shadow: 0px 0px 0px black;
+    height: 0px;
+    background: cover;
+    position: absolute;
+    border-radius: 1000px;
+    width: 0px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: inline-block; }
+
+.curriculum-vita {
+  position: absolute;
+  background: #f0c8c8;
+  height: 1080px;
+  width: 100%;
+  right: 100%;
+  top: 0; }
+
+.portfolio {
+  position: absolute;
+  background: #c8c8f0;
+  height: 1080px;
+  width: 100%;
+  right: -100%;
+  top: 0; }
+
+.curriculum-vita-button {
+  position: fixed;
+  width: 75px;
+  height: 100%;
+  background: rgba(64, 64, 64, 0.8);
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  left: -75px; }
+  .curriculum-vita-button h2 {
+    text-transform: uppercase;
+    width: 50px;
+    word-wrap: break-word;
+    color: rgba(240, 240, 240, 0.8);
+    text-align: center;
+    float: left;
+    margin-left: 10px;
+    font-size: 50px; }
+
+.portfolio-button {
+  right: -75px;
+  position: fixed;
+  width: 75px;
+  height: 100%;
+  background: rgba(64, 64, 64, 0.8);
+  border: 0;
+  outline: 0;
+  cursor: pointer; }
+  .portfolio-button h2 {
+    text-transform: uppercase;
+    width: 50px;
+    word-wrap: break-word;
+    color: rgba(240, 240, 240, 0.8);
+    text-align: center;
+    float: right;
+    margin-right: 10px;
+    font-size: 50px; }
