@@ -406,12 +406,12 @@ function BeginingTrans()
                }
             else if(shadowDistance<10||shadowHoriz>-2||shadowVertic<2)
                     {
-                    shadowDistance+=timeDelta*5;
-                        
+                    shadowDistance+=timeDelta*40;
+                         shadowHoriz-=timeDelta*8;
+                        shadowVertic+=timeDelta*8;
                         if(shadowDistance>=10)
                             {
-                                shadowHoriz-=timeDelta;
-                        shadowVertic+=timeDelta;
+                               
                                 shadowDistance=10;
                             }
                         if(shadowHoriz<=-2)
@@ -439,10 +439,16 @@ function BeginingTrans()
 }
 function CopyTextFade()
 {
-    if(elem!=null)
+    if(elemCopyTrue)
         {
             elemCopyBuffer-=timeDelta;
+            if(elemCopyBuffer<=0)
+                {
+                    DeleteText(elem);
+                    
+                }
             elem.style.color=elemCopyColor+elemCopyBuffer+")";
+            
         }
 }
 function DefaultSettings()
@@ -493,7 +499,7 @@ function Clipboard(infoint)
   document.body.removeChild(aux);
 
       DeleteText(elem);
-        
+        elemCopyTrue=true;
     elemCopyBuffer=1;
  elem=document.createElement("p");
     var parentElem=document.getElementById("profile-body-contact");
@@ -501,7 +507,9 @@ function Clipboard(infoint)
     parentElem.appendChild(elem);
 }
 function DeleteText(elem)
-{if(elem!=null)
+{if(elemCopyTrue)
         {
     elem.parentElement.removeChild(elem);
+            elemCopyTrue=false;
 }}
+var elemCopyTrue=false;
