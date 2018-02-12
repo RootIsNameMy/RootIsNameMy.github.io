@@ -55,27 +55,36 @@ function OpenMenu(menu)
     programmingElem.style.zIndex="1";
     
     
-    if(menu==1&&!graphicTrue)
+    if(menu==1)
+        {
+       if(!graphicTrue)
         {
             graphicTrue=true;
             d3True=false;
             programmingTrue=false;
             graphicsElem.style.zIndex="2";
             changeMenuTrue=true;
-            graphicsMenuElem.style.borderBottom="none";
             
-           graphicsMenuElem.style.color="#ccc";
+            graphicsMenuElem.style.borderBottom="2px solid currentColor";
+            d3MenuElem.style.borderBottom="none";
+            programmingMenuElem.style.borderBottom="none";
+            
+           graphicsMenuElem.style.color="#ddd";
             d3MenuElem.style.color="#fff";
     programmingMenuElem.style.color="#fff";
             
-            graphicsMenuElem.style.cursor="default";
-            d3MenuElem.style.cursor="pointer";
-    programmingMenuElem.style.cursor="pointer";
             
-           document.title="Afinity studios - graphics"
             
+           document.title="Afinity studios - graphics";
         }
-    else if(menu==2&&!d3True)
+            else
+                {
+                    OpenFrontPage();
+                }
+        }
+    else if(menu==2)
+        {
+            if(!d3True)
         {
             graphicTrue=false;
             d3True=true;
@@ -83,19 +92,27 @@ function OpenMenu(menu)
             changeMenuTrue=true;
           
             d3Elem.style.zIndex="2";
-            d3MenuElem.style.borderBottom="none";
+            
+            graphicsMenuElem.style.borderBottom="none";
+            d3MenuElem.style.borderBottom="2px solid currentColor";
+            programmingMenuElem.style.borderBottom="none";
             
             graphicsMenuElem.style.color="#fff";
-           d3MenuElem.style.color="#ccc";
+           d3MenuElem.style.color="#ddd";
             programmingMenuElem.style.color="#fff";
             
-            graphicsMenuElem.style.cursor="pointer";
-            d3MenuElem.style.cursor="default";
-            programmingMenuElem.style.cursor="pointer";
+            
              
-            document.title="Afinity studios - 3D"
+            document.title="Afinity studios - 3D";
         }
-    else if(menu==3&&!programmingTrue)
+    else
+        {
+            OpenFrontPage();
+        }
+}
+    else if(menu==3)
+        {
+            if(!programmingTrue)
         {
             graphicTrue=false;
             d3True=false;
@@ -103,17 +120,22 @@ function OpenMenu(menu)
             
             programmingElem.style.zIndex="2";
             changeMenuTrue=true;
-            programmingMenuElem.style.borderBottom="none";
+            
+            graphicsMenuElem.style.borderBottom="none";
+            d3MenuElem.style.borderBottom="none";
+            programmingMenuElem.style.borderBottom="2px solid currentColor";
             
             graphicsMenuElem.style.color="#fff";
     d3MenuElem.style.color="#fff";
-            programmingMenuElem.style.color="#ccc";
+            programmingMenuElem.style.color="#ddd";
             
-            graphicsMenuElem.style.cursor="default";
-            d3MenuElem.style.cursor="pointer";
-            programmingMenuElem.style.cursor="default";
-            document.title="Afinity studios - programming"
            
+            document.title="Afinity studios - programming"
+        }
+            else
+                {
+                     OpenFrontPage();
+                }
         }
 }
 function OpenFrontPage()
@@ -126,9 +148,11 @@ function OpenFrontPage()
     graphicsMenuElem.style.color="#fff";
     d3MenuElem.style.color="#fff";
     programmingMenuElem.style.color="#fff";
-    graphicsMenuElem.style.cursor="pointer";
-    d3MenuElem.style.cursor="pointer";
-    programmingMenuElem.style.cursor="pointer";
+    
+    graphicsMenuElem.style.borderBottom="none";
+    d3MenuElem.style.borderBottom="none";
+            programmingMenuElem.style.borderBottom="none";
+    
     changeMenuTrue=true;
     frontPageTrue=true;
     document.title="Afinity studios - home"
@@ -141,27 +165,27 @@ var programmingMenuElem=document.getElementById("programming-menu");
 
 function HoverMenu(menu)
 {
-    if(menu==1&&!graphicTrue)
+    if(menu==1&&!graphicTrue||menu==1&&frontPageTrue)
         {
-            graphicsMenuElem.style.borderBottom="2px solid currentColor";
+            graphicsMenuElem.style.borderBottom="1px solid currentColor";
         }
-    else if(menu==2&&!d3True)
+    else if(menu==2&&!d3True||menu==2&&frontPageTrue)
         {
-            d3MenuElem.style.borderBottom="2px solid currentColor";
+            d3MenuElem.style.borderBottom="1px solid currentColor";
         }
-    else if(menu==3&&!programmingTrue)
+    else if(menu==3&&!programmingTrue||menu==3&&frontPageTrue)
         {
-           programmingMenuElem.style.borderBottom="2px solid currentColor";
+           programmingMenuElem.style.borderBottom="1px solid currentColor";
         }
-    else if(menu==4)
+    else if(menu==4&&!graphicTrue||menu==4&&frontPageTrue)
         {
             graphicsMenuElem.style.borderBottom="none";
         }
-    else if(menu==5)
+    else if(menu==5&&!d3True||menu==5&&frontPageTrue)
         {
             d3MenuElem.style.borderBottom="none";
         }
-    else if(menu==6)
+    else if(menu==6&&!programmingTrue||menu==66&&frontPageTrue)
         {
            programmingMenuElem.style.borderBottom="none";
         }
