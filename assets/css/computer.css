@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Icomoon";
+  src: url("../fonts/DejaVuSans-ExtraLight.ttf"); }
+h1, h2, p {
+  font-family: Icomoon; }
+
+body {
+  margin: 0;
+  font-family: Icomoon; }
+
+body {
+  overflow: hidden; }
+
+.front-page {
+  position: absolute;
+  background: url("../img/background.png") no-repeat bottom center fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%; }
+
+.fixed-obj {
+  z-index: 10;
+  position: fixed; }
+  .fixed-obj .logo-div {
+    position: fixed;
+    top: 50px;
+    left: 100px; }
+    .fixed-obj .logo-div .mouse-logo {
+      z-index: 1;
+      position: fixed;
+      height: 40px;
+      width: 84px;
+      left: 110px;
+      cursor: pointer; }
+      .fixed-obj .logo-div .mouse-logo:hover {
+        transform: scale(1.1); }
+    .fixed-obj .logo-div .logo {
+      height: 40px;
+      margin-left: 10px;
+      margin-right: 10px; }
+    .fixed-obj .logo-div .as {
+      height: 40px;
+      margin-left: 10px;
+      margin-right: 10px;
+      cursor: pointer; }
+      .fixed-obj .logo-div .as:hover {
+        transform: scale(1.1); }
+  .fixed-obj .git-logo {
+    position: fixed;
+    left: 95px;
+    bottom: 110px;
+    cursor: pointer; }
+  .fixed-obj .menu {
+    position: fixed;
+    right: 100px;
+    top: 60px;
+    display: inline; }
+    .fixed-obj .menu a {
+      color: #eee;
+      margin-left: 17px;
+      margin-right: 17px;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 0;
+      text-transform: uppercase; }
+
+.site-nav {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+  .site-nav .graphics {
+    width: 100%;
+    height: 100%;
+    background: #9b2621;
+    position: absolute;
+    left: -110%; }
+  .site-nav .d3 {
+    width: 100%;
+    height: 100%;
+    background: #949a00;
+    position: absolute;
+    top: 110%; }
+  .site-nav .programming {
+    width: 100%;
+    height: 100%;
+    background: #307b8b;
+    position: absolute;
+    right: -110%; }
