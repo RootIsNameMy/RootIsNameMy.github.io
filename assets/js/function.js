@@ -65,7 +65,7 @@ function OpenMenu(menu)
             graphicsElem.style.zIndex="2";
             changeMenuTrue=true;
             
-            graphicsMenuElem.style.borderBottom="2px solid currentColor";
+            graphicsMenuElem.style.borderBottom="1px solid currentColor";
             d3MenuElem.style.borderBottom="none";
             programmingMenuElem.style.borderBottom="none";
             
@@ -94,7 +94,7 @@ function OpenMenu(menu)
             d3Elem.style.zIndex="2";
             
             graphicsMenuElem.style.borderBottom="none";
-            d3MenuElem.style.borderBottom="2px solid currentColor";
+            d3MenuElem.style.borderBottom="1px solid currentColor";
             programmingMenuElem.style.borderBottom="none";
             
             graphicsMenuElem.style.color="#fff";
@@ -123,7 +123,7 @@ function OpenMenu(menu)
             
             graphicsMenuElem.style.borderBottom="none";
             d3MenuElem.style.borderBottom="none";
-            programmingMenuElem.style.borderBottom="2px solid currentColor";
+            programmingMenuElem.style.borderBottom="1px solid currentColor";
             
             graphicsMenuElem.style.color="#fff";
     d3MenuElem.style.color="#fff";
@@ -167,15 +167,15 @@ function HoverMenu(menu)
 {
     if(menu==1&&!graphicTrue||menu==1&&frontPageTrue)
         {
-            graphicsMenuElem.style.borderBottom="1px solid currentColor";
+            graphicsMenuElem.style.borderBottom="2px solid currentColor";
         }
     else if(menu==2&&!d3True||menu==2&&frontPageTrue)
         {
-            d3MenuElem.style.borderBottom="1px solid currentColor";
+            d3MenuElem.style.borderBottom="2px solid currentColor";
         }
     else if(menu==3&&!programmingTrue||menu==3&&frontPageTrue)
         {
-           programmingMenuElem.style.borderBottom="1px solid currentColor";
+           programmingMenuElem.style.borderBottom="2px solid currentColor";
         }
     else if(menu==4&&!graphicTrue||menu==4&&frontPageTrue)
         {
