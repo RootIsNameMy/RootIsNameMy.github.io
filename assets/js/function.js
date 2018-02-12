@@ -28,6 +28,8 @@ var changeMenuTrue=false;
 var frameDelta=0.01;
 var frameElem=setInterval(frame,10);
 
+var titleElem=document.getElementById("title");
+
 
 var testSpeed=false;
 function TestSpeed()
@@ -70,7 +72,7 @@ function OpenMenu(menu)
             d3MenuElem.style.cursor="pointer";
     programmingMenuElem.style.cursor="pointer";
             
-           
+           document.title="Afinity studios - graphics"
             
         }
     else if(menu==2&&!d3True)
@@ -91,7 +93,7 @@ function OpenMenu(menu)
             d3MenuElem.style.cursor="default";
             programmingMenuElem.style.cursor="pointer";
              
-       
+            document.title="Afinity studios - 3D"
         }
     else if(menu==3&&!programmingTrue)
         {
@@ -110,7 +112,7 @@ function OpenMenu(menu)
             graphicsMenuElem.style.cursor="default";
             d3MenuElem.style.cursor="pointer";
             programmingMenuElem.style.cursor="default";
-            
+            document.title="Afinity studios - programming"
            
         }
 }
@@ -129,6 +131,7 @@ function OpenFrontPage()
     programmingMenuElem.style.cursor="pointer";
     changeMenuTrue=true;
     frontPageTrue=true;
+    document.title="Afinity studios - home"
 }
 
 var graphicsMenuElem=document.getElementById("graphics-menu");

@@ -82,18 +82,18 @@ body {
   .site-nav .graphics {
     width: 100%;
     height: 100%;
-    background: #9b2621;
+    background: radial-gradient(#ff4a41, #87211d);
     position: absolute;
     left: -110%; }
   .site-nav .d3 {
     width: 100%;
     height: 100%;
-    background: #949a00;
+    background: radial-gradient(yellow, #818500);
     position: absolute;
     top: 110%; }
   .site-nav .programming {
     width: 100%;
     height: 100%;
-    background: #307b8b;
+    background: radial-gradient(#5df0ff, #296b79);
     position: absolute;
     right: -110%; }
