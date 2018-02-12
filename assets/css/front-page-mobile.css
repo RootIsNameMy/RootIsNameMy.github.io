@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Icomoon";
+  src: url("../fonts/DejaVuSans-ExtraLight.ttf"); }
+h1, h2, p {
+  font-family: Icomoon; }
+
+body {
+  margin: 0;
+  font-family: Icomoon; }

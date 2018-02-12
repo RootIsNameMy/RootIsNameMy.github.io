@@ -1,8 +1,9 @@
 
 var logoColorElem=document.getElementById("logo-color");
-var logoColors=["#eee","#CA312B","#C1C800","#3ea0b5"]
+var logoColors=["#fff","#CA312B","#C1C800","#3ea0b5"]
 
 var logoElem=document.getElementById("logo");
+var asElem=document.getElementById("as");
 
 var graphicsElem=document.getElementById("graphics");
 var d3Elem=document.getElementById("d3");
@@ -60,12 +61,17 @@ function OpenMenu(menu)
             graphicsElem.style.zIndex="2";
             changeMenuTrue=true;
             graphicsMenuElem.style.borderBottom="none";
-           graphicsMenuElem.style.color="#aaa";
-            d3MenuElem.style.color="#eee";
-    programmingMenuElem.style.color="#eee";
+            
+           graphicsMenuElem.style.color="#ccc";
+            d3MenuElem.style.color="#fff";
+    programmingMenuElem.style.color="#fff";
+            
             graphicsMenuElem.style.cursor="default";
             d3MenuElem.style.cursor="pointer";
     programmingMenuElem.style.cursor="pointer";
+            
+           
+            
         }
     else if(menu==2&&!d3True)
         {
@@ -76,13 +82,16 @@ function OpenMenu(menu)
           
             d3Elem.style.zIndex="2";
             d3MenuElem.style.borderBottom="none";
-            graphicsMenuElem.style.color="#eee";
             
-           d3MenuElem.style.color="#aaa";
-            programmingMenuElem.style.color="#eee";
+            graphicsMenuElem.style.color="#fff";
+           d3MenuElem.style.color="#ccc";
+            programmingMenuElem.style.color="#fff";
+            
             graphicsMenuElem.style.cursor="pointer";
             d3MenuElem.style.cursor="default";
             programmingMenuElem.style.cursor="pointer";
+             
+       
         }
     else if(menu==3&&!programmingTrue)
         {
@@ -93,12 +102,16 @@ function OpenMenu(menu)
             programmingElem.style.zIndex="2";
             changeMenuTrue=true;
             programmingMenuElem.style.borderBottom="none";
-            graphicsMenuElem.style.color="#eee";
-    d3MenuElem.style.color="#eee";
-            programmingMenuElem.style.color="#aaa";
+            
+            graphicsMenuElem.style.color="#fff";
+    d3MenuElem.style.color="#fff";
+            programmingMenuElem.style.color="#ccc";
+            
             graphicsMenuElem.style.cursor="default";
             d3MenuElem.style.cursor="pointer";
             programmingMenuElem.style.cursor="default";
+            
+           
         }
 }
 function OpenFrontPage()
@@ -107,10 +120,10 @@ function OpenFrontPage()
         {
             return;
         }
-    logoColorElem.style.fill= logoColors[0];
-    graphicsMenuElem.style.color="#eee";
-    d3MenuElem.style.color="#eee";
-    programmingMenuElem.style.color="#eee";
+   
+    graphicsMenuElem.style.color="#fff";
+    d3MenuElem.style.color="#fff";
+    programmingMenuElem.style.color="#fff";
     graphicsMenuElem.style.cursor="pointer";
     d3MenuElem.style.cursor="pointer";
     programmingMenuElem.style.cursor="pointer";
@@ -150,40 +163,70 @@ function HoverMenu(menu)
            programmingMenuElem.style.borderBottom="none";
         }
 }
-var random=0;
-var mouseOverLogo=false;
+var randomLogo=0;
+var randomAS=0;
 function HoverLogo(hover)
 {
     if(hover)
         {
-            if(!mouseOverLogo)
-                {
-            random+=Math.floor(Math.random()*2+1);
-                    random=random%3;
-                    if(random==0)
+            
+            randomLogo+=Math.floor(Math.random()*2+1);
+                    randomLogo=randomLogo%3;
+                    if(randomLogo==0)
                         {
-                            random=3;
+                            randomLogo=3;
                         }
-            logoColorElem.style.fill= logoColors[random];
-                    logoElem.style.transform="scale(1.1)";
-            mouseOverLogo=true;
-        }
+            logoColorElem.style.fill= logoColors[randomLogo];
+                    //logoElem.style.transform="scale(1.1)";
+            
+        
         }
     else
         {
             logoColorElem.style.fill= logoColors[0];
-            logoElem.style.transform="scale(1)";
-            mouseOverLogo=false;
+            //logoElem.style.transform="scale(1)";
+         
+        }
+}
+var asStudioElems=document.getElementsByClassName("studio");
+function ASHover(hover)
+{
+    if(hover)
+        {
+            
+            randomAS+=Math.floor(Math.random()*2+1);
+                    randomAS=randomAS%3;
+                    if(randomAS==0)
+                        {
+                            randomAS=3;
+                        }
+            for(i=0;i<asStudioElems.length;i++)
+                {
+                    asStudioElems[i].style.fill=logoColors[randomAS];
+                }
+            
+        
+        }
+        
+    else
+        {
+           for(i=0;i<asStudioElems.length;i++)
+                {
+                    asStudioElems[i].style.fill=logoColors[0];
+                } 
         }
 }
 function ClickLogo()
 {
-    OpenMenu(random);
+    OpenMenu(randomLogo);
 }
 
 
 function frame()
 {
+    
+    var ySpeed=(window.innerWidth/window.innerHeight);
+   
     if(frontPageTrue)
         {
             if(graphicTrue)
@@ -213,7 +256,7 @@ function frame()
                             if(testSpeed)
                                 currentD3Top+=frameDelta*110;
                             else
-                            currentD3Top+=(Math.abs(110-currentD3Top)*2+10)*frameDelta;
+                            currentD3Top+=(Math.abs(110-currentD3Top)*2*ySpeed+10)*frameDelta;
                             if(currentD3Top>=110)
                                 {
                                     currentD3Top=110;
@@ -274,7 +317,7 @@ function frame()
                             if(testSpeed)
                                 currentD3Top-=frameDelta*110;
                             else
-                            currentD3Top-=(Math.abs(d3Top-currentD3Top)*2+10)*frameDelta;
+                            currentD3Top-=(Math.abs(d3Top-currentD3Top)*2*ySpeed+10)*frameDelta;
                             if(currentD3Top<=d3Top)
                                 {
                                     currentD3Top=d3Top;
