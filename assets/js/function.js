@@ -165,29 +165,50 @@ var programmingMenuElem=document.getElementById("programming-menu");
 
 function HoverMenu(menu)
 {
-    if(menu==1&&!graphicTrue||menu==1&&frontPageTrue)
+    if(menu==1||menu==1&&frontPageTrue)
         {
             graphicsMenuElem.style.borderBottom="2px solid currentColor";
         }
-    else if(menu==2&&!d3True||menu==2&&frontPageTrue)
+    else if(menu==2||menu==2&&frontPageTrue)
         {
             d3MenuElem.style.borderBottom="2px solid currentColor";
         }
-    else if(menu==3&&!programmingTrue||menu==3&&frontPageTrue)
+    else if(menu==3||menu==3&&frontPageTrue)
         {
            programmingMenuElem.style.borderBottom="2px solid currentColor";
         }
-    else if(menu==4&&!graphicTrue||menu==4&&frontPageTrue)
+    else if(menu==4)
         {
+            if(!graphicTrue||frontPageTrue)
+                {
             graphicsMenuElem.style.borderBottom="none";
-        }
-    else if(menu==5&&!d3True||menu==5&&frontPageTrue)
+                }
+            else
+                {
+                    graphicsMenuElem.style.borderBottom="1px solid currentColor";
+                }
+}   
+    else if(menu==5)
         {
+            if(!d3True||frontPageTrue)
+                {
             d3MenuElem.style.borderBottom="none";
+                }
+            else
+                {
+                    d3MenuElem.style.borderBottom="1px solid currentColor";
+                }
         }
-    else if(menu==6&&!programmingTrue||menu==66&&frontPageTrue)
+    else if(menu==6)
         {
-           programmingMenuElem.style.borderBottom="none";
+           if(!programmingTrue||frontPageTrue)
+                {
+            programmingMenuElem.style.borderBottom="none";
+                }
+            else
+                {
+                    programmingMenuElem.style.borderBottom="1px solid currentColor";
+                }
         }
 }
 var randomLogo=0;
