@@ -13,12 +13,12 @@ var graphicsTop=0;
 var d3Top=0;
 var programmingTop=0;
 var currentGraphicsTop=0;
-var currentD3Top=110;
+var currentD3Top=0;
 var currentProgrammingTop=0;
 
 var graphicsLeft=-110;
 var programmingRight=-110;
-
+var d3OutTop=110;
 
 var frontPageTrue=true;
 var graphicTrue=false;
@@ -270,9 +270,58 @@ function ClickLogo()
 }
 
 
+var graphicsYElem=document.getElementById("graphics-y")
+var d3YElem=document.getElementById("d3-y")
+var programmingYElem=document.getElementById("programming-y")
+
+
+var MOUSE_OVER = false;
+
+var minGraphicsTop;
+var minD3Top;
+var minProgrammingTop;
+
+
+document.addEventListener("mousewheel",function(e){
+    var delta=-e.deltaY;
+    if(graphicTrue)
+        {
+            graphicsTop+=delta;
+        }
+    else if(d3True)
+        {
+            d3Top+=delta;
+        }
+    else if(programmingTrue)
+        {
+            programmingTop+=delta;
+        }
+    
+});
 function frame()
 {
     
+    minGraphicsTop=-graphicsYElem.clientHeight+window.innerHeight;
+    minD3Top=-d3YElem.clientHeight+window.innerHeight;
+    minProgrammingTop=-programmingYElem.clientHeight+window.innerHeight;
+    
+    
+    graphicsTop=Math.min(Math.max(graphicsTop,minGraphicsTop),0);
+    d3Top=Math.min(Math.max(d3Top,minD3Top),0);
+    programmingTop=Math.min(Math.max(programmingTop,minProgrammingTop),0);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //menu transfer
     var ySpeed=(window.innerWidth/window.innerHeight);
    
     if(frontPageTrue)
@@ -299,26 +348,27 @@ function frame()
     else if(d3True)
         {
             
-                    if(currentD3Top<110)
+                    if(d3OutTop<110)
                         {
                             if(testSpeed)
-                                currentD3Top+=frameDelta*110;
+                                d3OutTop+=frameDelta*110;
                             else
-                            currentD3Top+=(Math.abs(110-currentD3Top)*2*ySpeed+10)*frameDelta;
-                            if(currentD3Top>=110)
+                            d3OutTop+=(Math.abs(110-d3OutTop)*2*ySpeed+10)*frameDelta;
+                            if(d3OutTop>=110)
                                 {
-                                    currentD3Top=110;
+                                    d3OutTop=110;
                                     d3True=false;
                                     changeMenuTrue=false;
                                     
                                 }
-                            d3Elem.style.top=currentD3Top+"%";
+                            d3Elem.style.top=d3OutTop+"%";
                         
                         }
             
         }
     else if(programmingTrue)
         {
+            
             if(programmingRight>-110)
         {
             if(testSpeed)
@@ -338,6 +388,20 @@ function frame()
         }
    else if(graphicTrue)
         {
+            //scroll
+            if(graphicsTop!=currentGraphicsTop)
+                {
+                    currentGraphicsTop+=(graphicsTop-currentGraphicsTop)*frameDelta*10;
+                    if(Math.abs(currentGraphicsTop-graphicsTop)<1)
+                        {
+                            currentGraphicsTop=graphicsTop;
+                        }
+                    graphicsYElem.style.top=currentGraphicsTop+"px";
+                }
+            
+            
+            
+            //menu transfer
             if(graphicsLeft<0)
         {
             if(testSpeed)
@@ -347,8 +411,8 @@ function frame()
             if(graphicsLeft>=0)
                 {
                     graphicsLeft=0
-                    currentD3Top=110;
-                    d3Elem.style.top=currentD3Top+"%";
+                    d3OutTop=110;
+                    d3Elem.style.top=d3OutTop+"%";
                     programmingRight=-110;
                     programmingElem.style.right=programmingRight+"%";
                     changeMenuTrue=false;
@@ -359,16 +423,29 @@ function frame()
         }
     else if(d3True)
         {
+            //scroll
+            if(d3Top!=currentD3Top)
+                {
+                    currentD3Top+=(d3Top-currentD3Top)*frameDelta*10;
+                    if(Math.abs(currentD3Top-d3Top)<1)
+                        {
+                            currentD3Top=d3Top;
+                        }
+                    d3YElem.style.top=currentD3Top+"px";
+                }
             
-                    if(currentD3Top>d3Top)
+            
+            
+            //menu transfer
+                    if(d3OutTop>0)
                         {
                             if(testSpeed)
-                                currentD3Top-=frameDelta*110;
+                                d3OutTop-=frameDelta*110;
                             else
-                            currentD3Top-=(Math.abs(d3Top-currentD3Top)*2*ySpeed+10)*frameDelta;
-                            if(currentD3Top<=d3Top)
+                            d3OutTop-=(Math.abs(0-d3OutTop)*2*ySpeed+10)*frameDelta;
+                            if(d3OutTop<=0)
                                 {
-                                    currentD3Top=d3Top;
+                                    d3OutTop=0;
                                     
                                     graphicsLeft=-110;
                                     graphicsElem.style.left=graphicsLeft+"%";
@@ -376,13 +453,27 @@ function frame()
                                     programmingElem.style.right=programmingRight+"%";
                                     changeMenuTrue=false;
                                 }
-                            d3Elem.style.top=currentD3Top+"%";
+                            d3Elem.style.top=d3OutTop+"%";
                         
                         }
             
         }
     else if(programmingTrue)
         {
+            //scroll
+            if(programmingTop!=currentProgrammingTop)
+                {
+                    currentProgrammingTop+=(programmingTop-currentProgrammingTop)*frameDelta*10;
+                    if(Math.abs(currentProgrammingTop-programmingTop)<1)
+                        {
+                            currentProgrammingTop=programmingTop;
+                        }
+                    programmingYElem.style.top=currentProgrammingTop+"px";
+                }
+            
+            
+            
+            //menu transfer
             if(programmingRight<0)
         {
             if(testSpeed)
@@ -392,8 +483,8 @@ function frame()
             if(programmingRight>=0)
                 {
                     programmingRight=0
-                    currentD3Top=110;
-                    d3Elem.style.top=currentD3Top+"%";
+                    d3OutTop=110;
+                    d3Elem.style.top=d3OutTop+"%";
                     graphicsLeft=-110;
                     graphicsElem.style.left=graphicsLeft+"%";
                     changeMenuTrue=false;
