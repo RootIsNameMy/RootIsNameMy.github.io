@@ -83,15 +83,43 @@ body {
     position: fixed;
     right: 100px;
     top: 60px;
-    display: inline; }
-    .fixed-obj .menu a {
-      color: #fff;
-      margin-left: 17px;
-      margin-right: 17px;
-      cursor: pointer;
-      font-size: 20px;
-      padding: 0;
-      text-transform: uppercase; }
+    display: inline;
+    width: 350px;
+    height: 70px; }
+    .fixed-obj .menu .nav1 {
+      position: absolute;
+      height: 50%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: inline-block; }
+      .fixed-obj .menu .nav1 a {
+        float: left;
+        color: #fff;
+        margin-left: 17px;
+        margin-right: 17px;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 0;
+        text-transform: uppercase;
+        display: inline-block; }
+    .fixed-obj .menu .nav2 {
+      position: absolute;
+      height: 50%;
+      width: 100%;
+      top: 50%;
+      left: 15%;
+      display: inline-block; }
+      .fixed-obj .menu .nav2 a {
+        float: left;
+        color: #fff;
+        margin-left: 17px;
+        margin-right: 17px;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 0;
+        text-transform: uppercase;
+        display: inline-block; }
 
 .site-nav {
   position: absolute;
@@ -104,25 +132,39 @@ body {
     position: absolute;
     left: -110%;
     overflow: hidden; }
-    .site-nav .graphics .graphics-y {
+    .site-nav .graphics .overflow-hide {
       position: absolute;
       margin: auto;
       top: 0;
-      left: 0;
-      right: 10%;
-      background: red;
-      display: inline-block;
-      width: 55%;
-      height: auto;
-      min-height: 100%; }
-      .site-nav .graphics .graphics-y div {
-        margin-top: 150px;
-        margin-left: 5%;
-        margin-right: 5%;
-        height: 700px;
-        width: 90%;
-        background: white;
-        display: inline-block; }
+      bottom: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 95%;
+      overflow: hidden;
+      display: inline-block; }
+      .site-nav .graphics .overflow-hide .graphics-y {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 10%;
+        background: red;
+        display: inline-block;
+        width: 55%;
+        height: auto;
+        min-height: 100%; }
+        .site-nav .graphics .overflow-hide .graphics-y .box {
+          margin-top: 100px;
+          margin-bottom: 20px;
+          margin-left: 5%;
+          margin-right: 5%;
+          height: 700px;
+          width: 90%;
+          background: white;
+          display: inline-block; }
+        .site-nav .graphics .overflow-hide .graphics-y .bottom {
+          width: 100%;
+          height: 100px; }
   .site-nav .d3 {
     width: 100%;
     height: 100%;
@@ -130,48 +172,75 @@ body {
     position: absolute;
     top: 110%;
     overflow: hidden; }
-    .site-nav .d3 .d3-y {
+    .site-nav .d3 .overflow-hide {
       position: absolute;
       margin: auto;
       top: 0;
-      left: 0;
-      right: 10%;
-      background: green;
-      display: inline-block;
-      width: 55%;
-      height: auto;
-      min-height: 100%; }
-      .site-nav .d3 .d3-y div {
-        margin-top: 150px;
-        margin-left: 5%;
-        margin-right: 5%;
-        height: 700px;
-        width: 90%;
-        background: white;
-        display: inline-block; }
+      bottom: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 95%;
+      overflow: hidden;
+      display: inline-block; }
+      .site-nav .d3 .overflow-hide .d3-y {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 10%;
+        background: green;
+        display: inline-block;
+        width: 55%;
+        height: auto;
+        min-height: 100%; }
+        .site-nav .d3 .overflow-hide .d3-y .box {
+          margin-top: 100px;
+          margin-bottom: 20px;
+          margin-left: 5%;
+          margin-right: 5%;
+          height: 700px;
+          width: 90%;
+          background: white;
+          display: inline-block; }
+        .site-nav .d3 .overflow-hide .d3-y .bottom {
+          width: 100%;
+          height: 100px; }
   .site-nav .programming {
     width: 100%;
     height: 100%;
     background: radial-gradient(#5df0ff, #296b79);
     position: absolute;
-    right: -110%;
-    overflow: hidden; }
-    .site-nav .programming .programming-y {
+    right: -110%; }
+    .site-nav .programming .overflow-hide {
       position: absolute;
       margin: auto;
       top: 0;
-      left: 0;
-      right: 10%;
-      background: blue;
-      display: inline-block;
-      width: 55%;
-      height: auto;
-      min-height: 100%; }
-      .site-nav .programming .programming-y div {
-        margin-top: 150px;
-        margin-left: 5%;
-        margin-right: 5%;
-        height: 700px;
-        width: 90%;
-        background: white;
-        display: inline-block; }
+      bottom: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 95%;
+      overflow: hidden;
+      display: inline-block; }
+      .site-nav .programming .overflow-hide .programming-y {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 10%;
+        background: blue;
+        display: inline-block;
+        width: 55%;
+        height: auto;
+        min-height: 100%; }
+        .site-nav .programming .overflow-hide .programming-y .box {
+          margin-top: 100px;
+          margin-bottom: 20px;
+          margin-left: 5%;
+          margin-right: 5%;
+          height: 700px;
+          width: 90%;
+          background: white;
+          display: inline-block; }
+        .site-nav .programming .overflow-hide .programming-y .bottom {
+          width: 100%;
+          height: 100px; }
