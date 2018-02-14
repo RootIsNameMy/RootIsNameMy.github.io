@@ -92,20 +92,19 @@ body {
   .fixed-obj .logo {
     position: fixed;
     z-index: 2;
-    top: 5px;
+    top: -30px;
     left: 5px;
     height: 30px;
     cursor: pointer; }
-    .fixed-obj .logo:hover + .menu-fixed div h2 {
-      color: rgba(255, 255, 255, 0.5); }
     .fixed-obj .logo:hover path {
       fill: white; }
     .fixed-obj .logo path {
       fill: rgba(255, 255, 255, 0.5); }
   .fixed-obj .menu-fixed {
     top: 50px;
+    left: -30px;
     position: fixed;
-    width: 120px;
+    width: 130px;
     height: auto; }
     .fixed-obj .menu-fixed div {
       margin-left: 0px;

@@ -102,13 +102,13 @@ var fixedContactElem=document.getElementById("contact-fixed");
 var fixedMenuElem=document.getElementById("menu-fixed");
 
 
-var fixedLogoTop= 5;
+var fixedLogoTop= -30;
 var fixedAboutLeft= 0;
 var fixedTeamLeft= 0;
 var fixedProjectsLeft= 0;
 var fixedContactLeft= 0;
 
-var fixedMenuLeft=0;
+var fixedMenuLeft=-30;
 
 
 var frameElem=setInterval(frame,10);
@@ -126,15 +126,15 @@ function frame()
                        }
                    fixedLogoElem.style.top=fixedLogoTop+"px";
                }
-            if(fixedMenuLeft<0)
-                {
-                    fixedMenuLeft+=(Math.abs(fixedMenuLeft)+1)*0.01*10;
-                    if(fixedMenuLeft>=0)
-                        {
+            //if(fixedMenuLeft<0)
+                //{
+                   // fixedMenuLeft+=(Math.abs(fixedMenuLeft)+1)*0.01*10;
+                   // if(fixedMenuLeft>=0)
+                      //  {
                             fixedMenuLeft=0;
-                        }
-                    fixedMenuElem.style.left=fixedMenuLeft+"px";
-                }
+                      //  }
+                  //  fixedMenuElem.style.left=fixedMenuLeft+"px";
+               // }
         }
     else
         {
@@ -147,14 +147,14 @@ function frame()
                        }
                    fixedLogoElem.style.top=fixedLogoTop+"px";
                }
-            if(fixedMenuLeft>-30)
-                {
-                    fixedMenuLeft-=(Math.abs(-30-fixedMenuLeft)+1)*0.01*10;
-                    if(fixedMenuLeft<=-30)
-                        {
-                            fixedMenuLeft=-30;
-                        }
-                    fixedMenuElem.style.left=fixedMenuLeft+"px";
-                }
+           // if(fixedMenuLeft>-30)
+               // {
+                //    fixedMenuLeft-=(Math.abs(-30-fixedMenuLeft)+1)*0.01*10;
+                  //  if(fixedMenuLeft<=-30)
+                     //   {
+                    //        fixedMenuLeft=-30;
+                     //   }
+                   // fixedMenuElem.style.left=fixedMenuLeft+"px";
+               // }
         }
 }
