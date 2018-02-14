@@ -21,35 +21,13 @@
 </head>
 <body >
 
-    <div class="front-page">
+    <div class="header" id="header">
     <video autoplay muted loop class="myVideo">
         <source src="../assets/img/background.mp4" type="video/mp4">
         
     </video>
 
-      
-        <svg class="git-logo"  onclick="TestSpeed()" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FFFFFF;}
-    .st1{fill:#FFFFFF;}
-</style>
-<g>
-	<path class="st0" d="M50,1C23,1,1,23,1,50c0,27,22,49,49,49s49-22,49-49C99,23,77,1,50,1z M50,90.8C27.5,90.8,9.2,72.5,9.2,50
-		S27.5,9.2,50,9.2S90.8,27.5,90.8,50S72.5,90.8,50,90.8z"/>
-	<path class="st1" d="M70.8,42.8c-1.4,0.2-2.6,0.8-3.6,1.6L38.7,31.8c0-0.2,0-0.5,0-0.7c-0.4-3.6-3.7-6.1-7.2-5.7s-6.1,3.7-5.7,7.2
-		s3.7,6.1,7.2,5.7c1.5-0.2,2.8-0.9,3.8-1.9l28.3,12.5c0,0.3,0,0.6,0,0.9L40,66.8c-1.1-0.6-2.4-0.8-3.7-0.6c-3.6,0.4-6.1,3.7-5.7,7.2
-		s3.7,6.1,7.2,5.7s6.1-3.7,5.7-7.2c-0.1-0.4-0.1-0.8-0.3-1.2l24.1-16.3c1.3,1.1,3.1,1.7,4.9,1.4c3.6-0.4,6.1-3.7,5.7-7.2
-		C77.6,44.9,74.3,42.4,70.8,42.8z"/>
-</g>
-</svg>
-  
-    
-    
-    
-</div>
-  <div class="fixed-obj">
-   <div class="logo-div">
+     <div class="logo-div">
    <div onclick="ClickLogo()" onmouseover="HoverLogo(true)" onmouseout="HoverLogo(false)" class="mouse-logo"></div>
    <svg  id="logo"  class="logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	  viewBox="0 0 210 100" enable-background="new 0 0 210 100" xml:space="preserve">
@@ -156,79 +134,119 @@
 	c-0.519,1.074-1.259,2.002-2.221,2.785c-0.962,0.782-2.126,1.4-3.493,1.853C169.251,109.158,167.72,109.384,166.022,109.384"/>
 </svg>
     
-    </div>
-    
-    <div class="menu">
-       <nav class="nav1">
-        <a id="graphics-menu" onmouseover="HoverMenu(1)" onmouseout="HoverMenu(4)" onclick="OpenMenu(1)">Graphics</a>
-        <a id="games-menu" onmouseover="HoverMenu(3)" onmouseout="HoverMenu(6)" onclick="OpenMenu(3)">Games</a>
+    </div> 
+    <nav class="menu-nav">
+        <a onclick="MenuNav(1)">About us</a>
+        <div class="vl"></div>
+        <a onclick="MenuNav(2)">Team</a>
+        <div class="vl"></div>
+        <a onclick="MenuNav(3)">Projects</a>
+        <div class="vl"></div>
+        <a onclick="MenuNav(4)">Contact</a>
         
-        </nav>
-        <nav class="nav2">
-        <a id="d3-menu" onmouseover="HoverMenu(2)" onmouseout="HoverMenu(5)" onclick="OpenMenu(2)">3D</a>
-        <a id="programming-menu" onmouseover="HoverMenu(3)" onmouseout="HoverMenu(6)" onclick="OpenMenu(3)">Programming</a>
-        
-        </nav>
-    </div>
-    
-    
-    
-    
-</div>
-  <nav class="site-nav" id="site">
-     <div class="graphics" id="graphics">
-   <div class="overflow-hide">
-    <div class="graphics-y" id="graphics-y">
-        <div class="box"></div>
-        
-        
-        
-        
-    </div>
-    </div>
-    
-    
-</div>
-     <div class="d3" id="d3">
-    <div class="overflow-hide">
-    <div class="d3-y" id="d3-y">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"> </div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-       
-        <div class="bottom"></div>
-        
-    </div>
-    </div>
-    
-</div>
-     <div class="programming" id="programming">
-   <div class="overflow-hide">
-    <div class="programming-y" id="programming-y">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-         <div class="bottom"></div>
-        
-    </div>
-    </div>
-    
-    
-</div> 
-  </nav>
+    </nav>
 
+  
+    
+    
+    
+</div>
+  <div class="fixed-obj">
+   
+    <svg  id="logo-fixed"  class="logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	  viewBox="0 0 210 100" enable-background="new 0 0 210 100" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="1.482" y="1.431" width="207.036" height="97.139"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<path id="logo-color-fixed" clip-path="url(#SVGID_2_)" fill="#FFFFFF" d="M69.858,28.629l0.017-0.018l21.388,21.39L70.658,70.605l-0.001,0.001
+		c-11.38,11.38-29.831,11.38-41.212,0c-11.38-11.38-11.38-29.832,0-41.212C40.563,18.276,58.428,18.022,69.858,28.629
+		 M83.612,14.875l-0.021,0.02C64.57-3.292,34.413-3.047,15.708,15.658c-18.967,18.967-18.967,49.719,0,68.686
+		c18.967,18.968,49.719,18.968,68.687,0L105,63.737l13.738,13.738l13.736-13.738L83.612,14.875z"/>
+	<path clip-path="url(#SVGID_2_)" fill="#FFFFFF" d="M194.293,15.657c-18.967-18.967-49.719-18.967-68.688,0l-6.867,6.869
+		l0.688,0.687l13.049,13.05l6.869-6.869c11.381-11.38,29.832-11.38,41.213,0.001c11.379,11.38,11.379,29.831,0,41.211
+		c-8.973,8.972-22.338,10.869-33.17,5.695l-14.225,14.224c18.859,12.493,44.516,10.434,61.131-6.181
+		C213.26,65.378,213.26,34.624,194.293,15.657"/>
+</g>
+</svg>
+    
+   <nav id="menu-fixed" class="menu-fixed">
+       <div  id="home-fixed">
+          <svg onclick="MenuNav(0)" height="100" width="100" x="0px" y="0px"
+	  viewBox="0 0 100 100" enable-background="new 0 0 100 100" >
+              <circle cx="50" cy="50" r="40"  fill="blue" /> 
+            </svg>  
+            <h2>home</h2>
+       </div>
+       <div id="about-fixed">
+          <svg onclick="MenuNav(1)" height="100" width="100" x="0px" y="0px"
+	  viewBox="0 0 100 100" enable-background="new 0 0 100 100" >
+              <circle cx="50" cy="50" r="40"  fill="blue" /> 
+            </svg>  
+            <h2>about us</h2>
+       </div>
+       <div id="team-fixed">
+          <svg onclick="MenuNav(2)" height="100" width="100" x="0px" y="0px"
+	  viewBox="0 0 100 100" enable-background="new 0 0 100 100" >
+              <circle cx="50" cy="50" r="40"  fill="blue" /> 
+            </svg>  
+            <h2>team</h2>
+       </div>
+       <div id="projects-fixed">
+          <svg onclick="MenuNav(3)" height="100" width="100" x="0px" y="0px"
+	  viewBox="0 0 100 100" enable-background="new 0 0 100 100" >
+              <circle cx="50" cy="50" r="40"  fill="blue" /> 
+            </svg>  
+            <h2>projects</h2>
+       </div>
+       <div id="contact-fixed">
+          <svg onclick="MenuNav(4)" height="100" width="100" x="0px" y="0px"
+	  viewBox="0 0 100 100" enable-background="new 0 0 100 100" >
+              <circle cx="50" cy="50" r="40"  fill="blue" /> 
+            </svg>  
+            <h2>contact</h2>
+       </div>
+   </nav>
+    
+    
+    
+    
+</div>
+  
+  <div class="about-us" id="about-us">
+    <h2>About us</h2>
+    
+    
+    
+    
+    
+</div>
+  <div class="team" id="team">
+    <h2>Team</h2>
+    
+    
+    
+    
+    
+</div>
+  <div class="projects" id="projects">
+    <h2>projects</h2>
+    
+    
+    
+</div>
+<div class="footer">
+    
+    
+</div>
+<h2 class="copyright">
+    Copyright 2018
+    
+    
+</h2>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="/assets/js/function.js"></script>
