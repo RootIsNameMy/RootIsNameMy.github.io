@@ -61,15 +61,9 @@ function ASHover(hover)
 
 function MenuNav(menu)// 0-home,,1-about us,2-team,3-projects,4-contact
 {
-    if(menu<4)
-        {
     pageNav=menu;
   zoom=!zoom;
-        }
-    else//contact menu
-        {
-            
-        }
+    
 }
 var zoom=false;
 var blur=true;
@@ -88,7 +82,7 @@ var bodyScale=35;
 var bodyContrast=0;
 
 var siteFile="../";
-var pages=[siteFile,siteFile+"about_us",siteFile+"our_team",siteFile+"projects"];
+var pages=[siteFile,siteFile+"about_us",siteFile+"success-stories-page"];
 
 
 function goToPage(str)

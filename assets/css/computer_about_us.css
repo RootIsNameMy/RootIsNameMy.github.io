@@ -10,7 +10,7 @@ body {
 
 body {
   height: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   transform: scale(35);
   filter: blur(15px);
   filter: contrast(100%); }
@@ -22,10 +22,6 @@ body {
   .header img {
     margin: auto;
     width: 100%; }
-  .header .myVideo {
-    margin: auto;
-    width: 100%;
-    display: inline-block; }
   .header .logo-div {
     position: absolute;
     top: 50px;

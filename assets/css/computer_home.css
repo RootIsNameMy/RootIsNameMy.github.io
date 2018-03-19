@@ -10,18 +10,15 @@ body {
 
 body {
   height: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   transform: scale(35);
   filter: blur(15px);
-  filter: contrast(100%); }
+  filter: contrast(0%); }
 
 .header {
   height: auto;
   width: 100%;
   margin: 0; }
-  .header img {
-    margin: auto;
-    width: 100%; }
   .header .myVideo {
     margin: auto;
     width: 100%;
