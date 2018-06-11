@@ -9,190 +9,112 @@ body {
   font-family: Icomoon; }
 
 body {
-  height: auto;
-  overflow-x: hidden;
-  transform: scale(35);
-  filter: blur(15px);
-  filter: contrast(100%); }
-
-.header {
-  height: auto;
-  width: 100%;
-  margin: 0; }
-  .header img {
+  height: auto; }
+  body .header {
+    z-index: 1;
+    height: 100vh;
+    position: absolute;
     margin: auto;
     width: 100%; }
-  .header .myVideo {
+    body .header .logo-left {
+      fill: white;
+      z-index: 1;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: scale(1.5); }
+    body .header .logo-right {
+      z-index: 1;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: scale(1.5); }
+  body .fixedObjects {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#555, #111); }
+  body .page1 {
+    z-index: 1;
+    height: 100vh;
+    position: absolute;
+    top: 100vh;
     margin: auto;
-    width: 100%;
-    display: inline-block; }
-  .header .logo-div {
-    position: absolute;
-    top: 50px;
-    left: 100px;
-    height: 50px;
-    width: 500px;
-    white-space: nowrap;
-    display: inline-block; }
-    .header .logo-div .mouse-logo {
-      z-index: 2;
+    width: 100%; }
+    body .page1 .logo-left {
+      fill: white;
+      z-index: 1;
       position: absolute;
-      height: 40px;
-      width: 84px;
-      left: 10px;
-      cursor: pointer; }
-      .header .logo-div .mouse-logo:hover + .logo path {
-        fill: white; }
-    .header .logo-div .mouse-as {
-      z-index: 2;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: scale(1); }
+    body .page1 .logo-right {
+      z-index: 1;
       position: absolute;
-      height: 40px;
-      width: 65px;
-      left: 114px;
-      cursor: pointer; }
-      .header .logo-div .mouse-as:hover + .as path {
-        fill: white; }
-      .header .logo-div .mouse-as:hover + .as rect {
-        fill: white; }
-    .header .logo-div .logo {
-      height: 40px;
-      margin-left: 10px;
-      margin-right: 10px;
-      display: inline-block;
-      float: left; }
-      .header .logo-div .logo path {
-        fill: rgba(255, 255, 255, 0.5); }
-      .header .logo-div .logo rect {
-        fill: rgba(255, 255, 255, 0.5); }
-    .header .logo-div .as {
-      height: 40px;
-      margin-left: 10px;
-      margin-right: 10px;
-      display: inline-block; }
-      .header .logo-div .as path {
-        fill: rgba(255, 255, 255, 0.5); }
-      .header .logo-div .as rect {
-        fill: rgba(255, 255, 255, 0.5); }
-  .header .menu-nav {
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: scale(1); }
+  body .page2 {
+    z-index: 1;
+    height: 100vh;
     position: absolute;
-    right: 100px;
-    top: 50px;
-    height: 30px; }
-    .header .menu-nav .vl {
-      height: 20px;
-      width: 1px;
-      background: #eee;
-      display: inline-block; }
-    .header .menu-nav a {
-      display: inline-block;
-      font-size: 20px;
-      margin: 10px;
-      color: #eee;
-      cursor: pointer;
-      text-transform: uppercase; }
-      .header .menu-nav a:hover {
-        border-bottom: 2px solid currentColor; }
-
-.fixed-obj {
-  position: fixed; }
-  .fixed-obj .logo {
-    position: fixed;
-    z-index: 2;
-    top: -30px;
-    left: 5px;
-    height: 30px;
-    cursor: pointer; }
-    .fixed-obj .logo:hover path {
-      fill: white; }
-    .fixed-obj .logo path {
-      fill: rgba(255, 255, 255, 0.5); }
-  .fixed-obj .menu-fixed {
-    top: 50px;
-    left: -30px;
-    position: fixed;
-    width: 130px;
-    height: auto; }
-    .fixed-obj .menu-fixed div {
-      margin-left: 0px;
-      width: 100%;
-      height: 20px; }
-      .fixed-obj .menu-fixed div svg {
-        float: left;
-        height: 100%;
-        width: auto;
-        margin-left: 5px;
-        margin-right: 5px;
-        padding-left: 0px;
-        cursor: pointer; }
-        .fixed-obj .menu-fixed div svg:hover circle {
-          fill: white; }
-        .fixed-obj .menu-fixed div svg:hover {
-          padding-left: 5px; }
-        .fixed-obj .menu-fixed div svg:hover + h2 {
-          color: white; }
-        .fixed-obj .menu-fixed div svg circle {
-          fill: rgba(255, 255, 255, 0.4); }
-      .fixed-obj .menu-fixed div h2 {
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0);
-        font-size: 100%; }
-
-.about-us {
-  height: 800px;
-  width: 100%;
-  background: #ddd; }
-  .about-us h2 {
-    width: 100%;
-    background: #454545;
-    color: #3ea0b5;
-    font-size: 50px;
-    text-align: center;
-    margin: 0;
-    text-transform: uppercase;
-    padding-top: 5px;
-    padding-bottom: 5px; }
-
-.team {
-  height: 800px;
-  width: 100%;
-  background: #ddd; }
-  .team h2 {
-    width: 100%;
-    background: #454545;
-    color: #3ea0b5;
-    font-size: 50px;
-    text-align: center;
-    margin: 0;
-    text-transform: uppercase;
-    padding-top: 5px;
-    padding-bottom: 5px; }
-
-.projects {
-  height: 800px;
-  width: 100%;
-  background: #ddd; }
-  .projects h2 {
-    width: 100%;
-    background: #454545;
-    color: #3ea0b5;
-    font-size: 50px;
-    text-align: center;
-    margin: 0;
-    text-transform: uppercase;
-    padding-top: 5px;
-    padding-bottom: 5px; }
-
-.footer {
-  width: 100%;
-  height: 250px;
-  background: #565656; }
-
-.copyright {
-  width: 100%;
-  background: #333;
-  color: #eee;
-  font-size: 15px;
-  text-align: center;
-  margin: 0;
-  padding-top: 2px;
-  padding-bottom: 2px; }
+    top: 200vh;
+    margin: auto;
+    width: 100%; }
+    body .page2 .logo-left {
+      fill: white;
+      z-index: 1;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: scale(1); }
+    body .page2 .logo-right {
+      z-index: 1;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: scale(1); }
+  body .page3 {
+    z-index: 1;
+    height: 100vh;
+    position: absolute;
+    top: 300vh;
+    margin: auto;
+    width: 100%; }
+    body .page3 .logo-left {
+      fill: white;
+      z-index: 1;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: scale(1); }
+    body .page3 .logo-right {
+      z-index: 1;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: scale(1); }
